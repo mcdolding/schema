@@ -484,13 +484,13 @@ module.exports.tests.notnullFilter = function(test, common) {
   });
 };
 
-// this filter creates edgeNGrams with the minimum size of 1
+// this filter creates edge_ngrams with the minimum size of 1
 module.exports.tests.peliasOneEdgeGramFilter = function(test, common) {
   test('has peliasIndexOneEdgeGram filter', function(t) {
     var s = settings();
     t.equal(typeof s.analysis.filter.peliasOneEdgeGramFilter, 'object', 'there is a peliasIndexOneEdgeGram filter');
     var filter = s.analysis.filter.peliasOneEdgeGramFilter;
-    t.equal(filter.type, 'edgeNGram');
+    t.equal(filter.type, 'edge_ngram');
     t.equal(filter.min_gram, 1);
     t.equal(filter.max_gram, 24);
     t.end();
