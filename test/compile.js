@@ -33,7 +33,7 @@ module.exports.tests.indices = function(test, common) {
   });
 };
 
-// some 'admin' types allow single edgeNGrams and so have a different dynamic_template
+// some 'admin' types allow single edge_ngrams and so have a different dynamic_template
 module.exports.tests.dynamic_templates = function(test, common) {
   test('dynamic_templates: nameGram', function(t) {
     t.equal(typeof schema.mappings.dynamic_templates[0].nameGram, 'object', 'nameGram template specified');
